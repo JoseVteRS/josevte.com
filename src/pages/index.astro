@@ -1,9 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<Header />
-	<slot />
+<Layout
+	title="Portfolio de Jose Vicente - Desarrollador y Programador Web con 5 años de experiencia"
+	description=""
+>
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero />
+		</SectionContainer>
+	</main>
 </Layout>
