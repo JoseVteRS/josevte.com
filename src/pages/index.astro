@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import SectionTitle from "../components/SectionTitle.astro";
 ---
 
 <Layout
@@ -13,14 +16,21 @@ import Experience from "../components/Experience.astro";
 		<SectionContainer class="py-16 md:py-36">
 			<Hero />
 		</SectionContainer>
+		<div class="space-y-24">
+			<SectionContainer id="experiencia">
+				<SectionTitle title="Experiencia laboral" subtitle="He aportado mi granito de arena y experiencia en:" />
+				<Experience />
+			</SectionContainer>
 
-		<SectionContainer id="experiencia">
-			<h2
-				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-			>
-				Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
+			<SectionContainer id="proyectos">
+				<SectionTitle title="Proyectos" subtitle="Algunos proyectos que he ido haciendo" />
+				<Projects />
+			</SectionContainer>
+
+			<SectionContainer id="sobre-mi">
+				<SectionTitle title="Sobre mi" subtitle="Todos tenemos una historia de ¿Cómo empezaste en la programación? Esta es la mía" />
+				<AboutMe />
+			</SectionContainer>
+		</div>
 	</main>
 </Layout>
