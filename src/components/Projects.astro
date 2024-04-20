@@ -1,0 +1,62 @@
+---
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Mongo from "./icons/Mongo.astro";
+import ProjectItem from "./ProjectItem.astro";
+
+const TAGS = {
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: NextJS,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: Tailwind,
+    },
+    MONGO: {
+        name: "MongoDB",
+        class: "bg-[#00684A] text-white",
+        icon: Mongo,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Lista de Regalos - Haz listas de regalos y compártelas",
+        link: "",
+        isWIP: true,
+        description:
+            "Aplicación web para crear listar de regalos y compartirlas entre tus amigos y familiares a través de un enlace generado. Se ha utilizado para la autentificación next-auth y como ORM Prisma",
+        github: "https://github.com/JoseVteRS/present-list",
+        image: "/projects/present-list.webp",
+        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
+    },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(
+            ({ image, title, description, tags, link, github, isWIP }) => (
+                <ProjectItem
+                    title={title}
+                    image={image}
+                    description={description}
+                    tags={tags}
+                    link={link}
+                    github={github}
+                    isWIP={isWIP}
+                />
+            ),
+        )
+    }
+</div>
+
+<div class="bg-zinc-800/40 rounded-xl py-5 px-6 mt-12">
+    <div class=" flex flex-col justify-center items-center">
+        <span class="text-xl font-bold">Pronto más proyectos.</span>
+        <span class="text-xl">Los estoy migrando de servidor</span>
+    </div>
+</div>
