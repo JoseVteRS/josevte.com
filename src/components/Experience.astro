@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+    {
+        date: "2018-Actual",
+        title: "Diseñador y Desarrollador web",
+        company: "Acrismatic",
+        description:
+            "Desarrollo a medida de diversos temas wordpress para las webs del grupo. Mejorando la calidad del código. Dejando de depender de builders. Demás de herramientas para agilizar el trabajo interno del departamento",
+        link: "https://acrismatic.es",
+    },
+    {
+        date: "2016-2017",
+        title: "Diseñador y Desarrollador web",
+        company: "Tictactickets",
+        description:
+            "Desarrollo de la página de la Tomatina para vender tickets. ",
+        link: "https://tomatina.es/",
+    },
+];
+---
+
+<ol class="relative mt-16">
+    {
+        EXPERIENCIE.map((experiencie) => (
+            <li class="">
+                <ExperienceItem {...experiencie} />
+            </li>
+        ))
+    }
+</ol>

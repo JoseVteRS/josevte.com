@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout
@@ -11,6 +12,15 @@ import SectionContainer from "../components/SectionContainer.astro";
 	<main class="px-4">
 		<SectionContainer class="py-16 md:py-36">
 			<Hero />
+		</SectionContainer>
+
+		<SectionContainer>
+			<h2
+				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+			>
+				Experiencia laboral
+			</h2>
+			<Experience />
 		</SectionContainer>
 	</main>
 </Layout>
