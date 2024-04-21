@@ -3,6 +3,8 @@ import Badge from "./Badge.astro";
 import SocialPill from "./SocialPill.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import Github from "./icons/Github.astro";
+import DownloadCVButton from "./DownloadCVButton.astro";
+import Soon from "./Soon.astro";
 ---
 
 <section class="max-w-full">
@@ -13,7 +15,12 @@ import Github from "./icons/Github.astro";
             alt="Jose Vte Ripoll Solanes"
         />
 
-        <a>
+        <a
+        href="https://www.linkedin.com/in/jose-vte-ripoll-solanes-44920250/"
+        target="_blank"
+        rel="noopener noreferer"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
+        >
             <Badge> Disponible para trabajar </Badge>
         </a>
     </div>
@@ -40,6 +47,9 @@ import Github from "./icons/Github.astro";
                 <LinkedIn />
                 LinkedIn
             </SocialPill>
+            <Soon>
+                <DownloadCVButton> Descarga mí CV </DownloadCVButton>
+            </Soon>
         </nav>
     </nav>
 </section>

@@ -3,6 +3,9 @@ import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Mongo from "./icons/Mongo.astro";
 import ProjectItem from "./ProjectItem.astro";
+import Soon from "./Soon.astro";
+import LinkButton from "./LinkButton.astro";
+import Github from "./icons/Github.astro";
 
 const TAGS = {
     NEXT: {
@@ -52,11 +55,52 @@ const PROJECTS = [
             ),
         )
     }
-</div>
 
-<div class="bg-zinc-100 dark:bg-zinc-800/40 rounded-xl py-5 px-6 mt-12">
-    <div class=" flex flex-col justify-center items-center">
-        <span class="text-xl font-bold">Pronto más proyectos.</span>
-        <span class="text-xl">Los estoy migrando de servidor</span>
+    <div>
+        <span class="text-lg mb-2 inline-block">Más proyectos en camino</span>
+        <Soon>
+            <article
+                class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+            >
+                <div class="w-full md:w-1/2 bg-gray-300 dark:bg-zinc-800 rounded-xl">
+                    <div
+                        class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:hover:bg-gray-800/50"
+                    >
+                        <div class="absolute z-10 left-2 top-2">
+                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            </div>
+                        </div>
+
+                        <div
+                            class="w-full h-56 bg-gray-300 dark:bg-zinc-800 rounded-md transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                        >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:max-w-lg">
+                    <div class="w-full h-8 bg-gray-300 dark:bg-zinc-800 rounded-md"></div>
+                    <div class="flex flex-wrap mt-2">
+                        <div class="flex flex-row mb-2 gap-x-2">
+                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            </div>
+                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            </div>
+                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            </div>
+                        </div>
+
+                        <div class="w-full h-24 bg-gray-300 dark:bg-zinc-800 rounded-md mt-2">
+                        </div>
+                        <footer
+                            class="flex items-end justify-start mt-4 gap-x-4"
+                        >
+                            <div class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"></div>
+                            <div class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"></div>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        </Soon>
     </div>
 </div>
