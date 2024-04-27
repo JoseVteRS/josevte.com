@@ -1,5 +1,5 @@
 ---
-
+import { aboutMe } from "@cv";
 ---
 
 <article
@@ -7,32 +7,6 @@
 >
     <div
         class="[&>h3]:font-semibold [&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
-    >
-        <p>
-            Me llamo José Vte, aunque prefiero que me llamen José. Realmente,
-            empecé a interesarme por la programación y el desarrollo web cuando
-            sufrí un esguince. Como no tenía mucho que hacer, instalé por aquel
-            entonces Dreamweaver y comencé a <em>experimentar</em>. No tenía ni
-            idea de desarrollo web ni de programación.
-        </p>
-        <p>
-            Sin parar de estudiar y siendo completamente autodidacta, he
-            conseguido <strong
-                >desarrollar un tema de Wordpress desde cero</strong
-            >.
-        </p>
-        <p>
-            He logrado que sea <strong>sostenible y escalable</strong>, gracias
-            a la utilización de <strong
-                >buena prácticas y principios SOLID</strong
-            > en PHP.
-        </p>
-        <p>
-            Si estás buscando un desarrollador web con una trayectoria de
-            aprendizaje autodidacta y dedicación, <strong
-                >me encantaría tener la oportunidad de aportar mi experiencia y
-                entusiasmo al equipo</strong
-            >.
-        </p>
-    </div>
+        set:html={aboutMe.rawText}
+    />
 </article>

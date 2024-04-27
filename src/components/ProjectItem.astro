@@ -4,23 +4,25 @@ import LinkButton from "./LinkButton.astro";
 import Github from "./icons/Github.astro";
 import Link from "./icons/Link.astro";
 
-interface Tag {
-    name: string;
-    class: string;
-    icon: (_props: Record<string, any>) => any;
-}
-
 interface Props {
-    title: string;
-    image: string;
-    isWIP?: boolean;
-    github?: string;
-    link?: string;
+    name: string;
+    image?: string;
+    isInProgress?: boolean;
+    url?: string;
+    repositoryUrl?: string;
     description: string;
-    tags: Tag[];
+    tecnologies: Array<string>;
 }
 
-const { title, description, tags, image, github, link, isWIP } = Astro.props;
+const {
+    name,
+    description,
+    tecnologies,
+    image,
+    repositoryUrl,
+    url,
+    isInProgress,
+} = Astro.props;
 ---
 
 <article
@@ -31,7 +33,7 @@ const { title, description, tags, image, github, link, isWIP } = Astro.props;
             class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
         >
             {
-                isWIP && (
+                isInProgress && (
                     <div class="absolute z-10 left-2 top-2">
                         <BadgeInfo> Trabajo en progreso </BadgeInfo>
                     </div>
@@ -49,18 +51,17 @@ const { title, description, tags, image, github, link, isWIP } = Astro.props;
 
     <div class="w-full md:w-1/2 md:max-w-lg">
         <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
+            {name}
         </h3>
         <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
                 {
-                    tags.map((tag) => (
+                    tecnologies.map((tecnology) => (
                         <li>
                             <span
-                                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                class={`flex gap-x-2 rounded-full text-xs py-1 px-2 `}
                             >
-                                <tag.icon class="size-4" />
-                                {tag.name}
+                                {tecnology}
                             </span>
                         </li>
                     ))
@@ -72,16 +73,16 @@ const { title, description, tags, image, github, link, isWIP } = Astro.props;
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {
-                    github && (
-                        <LinkButton href={github}>
+                    repositoryUrl && (
+                        <LinkButton href={repositoryUrl}>
                             <Github class="size-6" />
                             Code
                         </LinkButton>
                     )
                 }
                 {
-                    link && (
-                        <LinkButton href={link}>
+                    url && (
+                        <LinkButton href={url}>
                             <Link class="size-4" />
                             Preview
                         </LinkButton>

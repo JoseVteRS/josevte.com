@@ -1,31 +1,32 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
-    {
-        date: "2018-Actual",
-        title: "Diseñador y Desarrollador web",
-        company: "Acrismatic",
-        description:
-            "Desarrollo a medida de diversos temas de WordPress para las webs del grupo, mejorando la calidad del código, dejando de depender de constructores, además de herramientas desarrolladas en React para agilizar el trabajo interno del departamento.",
-        isCurrent: true,
-    },
-    {
-        date: "2016-2017",
-        title: "Diseñador y Desarrollador web",
-        company: "Tictactickets",
-        description:
-            "Desarrollo de la página de la Tomatina para vender tickets. ",
-        isCurrent: false,
-    },
-];
+import { work } from "@cv";
 ---
 
 <ol class="relative mt-16">
     {
-        EXPERIENCIE.map((experiencie) => (
-            <li class="">
-                <ExperienceItem {...experiencie} />
-            </li>
-        ))
+        work.map(
+            ({
+                endDate,
+                highlights,
+                name,
+                position,
+                startDate,
+                summary,
+                url,
+            }) => (
+                <li class="">
+                    <ExperienceItem
+                        name={name}
+                        summary={summary}
+                        url={url}
+                        startDate={startDate}
+                        endDate={endDate}
+                        highlights={highlights}
+                        position={position}
+                    />
+                </li>
+            ),
+        )
     }
 </ol>

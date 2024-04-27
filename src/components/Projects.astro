@@ -1,56 +1,29 @@
 ---
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
-import Mongo from "./icons/Mongo.astro";
 import ProjectItem from "./ProjectItem.astro";
 import Soon from "./Soon.astro";
-import LinkButton from "./LinkButton.astro";
-import Github from "./icons/Github.astro";
-
-const TAGS = {
-    NEXT: {
-        name: "Next.js",
-        class: "bg-black text-white",
-        icon: NextJS,
-    },
-    TAILWIND: {
-        name: "Tailwind CSS",
-        class: "bg-[#003159] text-white",
-        icon: Tailwind,
-    },
-    MONGO: {
-        name: "MongoDB",
-        class: "bg-[#00684A] text-white",
-        icon: Mongo,
-    },
-};
-
-const PROJECTS = [
-    {
-        title: "Lista de Regalos - Haz listas de regalos y compártelas",
-        link: "",
-        isWIP: true,
-        description:
-            "Aplicación web para crear listar de regalos y compartirlas entre tus amigos y familiares a través de un enlace generado. Se ha utilizado para la autentificación next-auth y como ORM Prisma",
-        github: "https://github.com/JoseVteRS/present-list",
-        image: "/projects/present-list.webp",
-        tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGO],
-    },
-];
+import { projects } from "@cv";
 ---
 
 <div class="flex flex-col gap-y-16">
     {
-        PROJECTS.map(
-            ({ image, title, description, tags, link, github, isWIP }) => (
+        projects.map(
+            ({
+                name,
+                url,
+                tecnologies,
+                image,
+                repositoryUrl,
+                description,
+                isInProgress,
+            }) => (
                 <ProjectItem
-                    title={title}
+                    name={name}
                     image={image}
                     description={description}
-                    tags={tags}
-                    link={link}
-                    github={github}
-                    isWIP={isWIP}
+                    tecnologies={tecnologies}
+                    url={url}
+                    repositoryUrl={repositoryUrl}
+                    isInProgress={isInProgress}
                 />
             ),
         )
@@ -62,12 +35,16 @@ const PROJECTS = [
             <article
                 class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
             >
-                <div class="w-full md:w-1/2 bg-gray-300 dark:bg-zinc-800 rounded-xl">
+                <div
+                    class="w-full md:w-1/2 bg-gray-300 dark:bg-zinc-800 rounded-xl"
+                >
                     <div
                         class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:hover:bg-gray-800/50"
                     >
                         <div class="absolute z-10 left-2 top-2">
-                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            <div
+                                class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full"
+                            >
                             </div>
                         </div>
 
@@ -79,24 +56,41 @@ const PROJECTS = [
                 </div>
 
                 <div class="w-full md:w-1/2 md:max-w-lg">
-                    <div class="w-full h-8 bg-gray-300 dark:bg-zinc-800 rounded-md"></div>
+                    <div
+                        class="w-full h-8 bg-gray-300 dark:bg-zinc-800 rounded-md"
+                    >
+                    </div>
                     <div class="flex flex-wrap mt-2">
                         <div class="flex flex-row mb-2 gap-x-2">
-                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            <div
+                                class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full"
+                            >
                             </div>
-                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            <div
+                                class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full"
+                            >
                             </div>
-                            <div class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full">
+                            <div
+                                class="w-16 h-6 bg-gray-300 dark:bg-zinc-800 rounded-full"
+                            >
                             </div>
                         </div>
 
-                        <div class="w-full h-24 bg-gray-300 dark:bg-zinc-800 rounded-md mt-2">
+                        <div
+                            class="w-full h-24 bg-gray-300 dark:bg-zinc-800 rounded-md mt-2"
+                        >
                         </div>
                         <footer
                             class="flex items-end justify-start mt-4 gap-x-4"
                         >
-                            <div class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"></div>
-                            <div class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"></div>
+                            <div
+                                class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"
+                            >
+                            </div>
+                            <div
+                                class="w-24 h-12 bg-gray-300 dark:bg-zinc-800 rounded-xl"
+                            >
+                            </div>
                         </footer>
                     </div>
                 </div>

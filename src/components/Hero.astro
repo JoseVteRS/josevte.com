@@ -2,24 +2,31 @@
 import Badge from "./Badge.astro";
 import SocialPill from "./SocialPill.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-import Github from "./icons/Github.astro";
+import GitHub from "./icons/Github.astro";
 import DownloadCVButton from "./DownloadCVButton.astro";
 import Soon from "./Soon.astro";
+import { basics } from "@cv";
+
+export type SocialIcon = Record<string, string | any>;
+const SOCIAL_ICONS: SocialIcon = {
+    GitHub,
+    LinkedIn,
+};
 ---
 
 <section class="max-w-full">
     <div class="flex gap-4 mb-4">
         <img
             class="rounded-full shadow-lg size-16"
-            src="/josevte.jpeg"
-            alt="Jose Vte Ripoll Solanes"
+            src={basics.image}
+            alt={basics.name}
         />
 
         <a
-        href="https://www.linkedin.com/in/jose-vte-ripoll-solanes-44920250/"
-        target="_blank"
-        rel="noopener noreferer"
-        class="flex items-center transition md:justify-center md:hover:scale-105"
+            href="https://www.linkedin.com/in/jose-vte-ripoll-solanes-44920250/"
+            target="_blank"
+            rel="noopener noreferer"
+            class="flex items-center transition md:justify-center md:hover:scale-105"
         >
             <Badge> Disponible para trabajar </Badge>
         </a>
@@ -27,26 +34,25 @@ import Soon from "./Soon.astro";
     <h1
         class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-        Hola, soy Jose Vte
+        Hola, soy {basics.name}
     </h1>
     <p
         class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-sky-600 [&>strong]:text-gray-800 [&>strong]:font-semibold dark:text-gray-300"
-    >
-        Más de 5 años de experiencia. <strong
-            >Técnico Superior en Desarrollo de Aplicaciones Web</strong
-        >, de Valencia, España 🇪🇸. Apasionado por la tecnología y el desarrollo de
-        soluciones innovadoras.
-    </p>
+        set:html={basics.summary}
+    />
     <nav>
         <nav class="flex flex-wrap gap-4 mt-8">
-            <SocialPill href="https://github.com/JoseVteRS">
-                <Github />
-                Github
-            </SocialPill>
-            <SocialPill href="https://www.linkedin.com/in/jose-vte-ripoll-solanes-44920250/">
-                <LinkedIn />
-                LinkedIn
-            </SocialPill>
+            {
+                basics.profiles.map((profile) => {
+                    const Icon = SOCIAL_ICONS[profile.network];
+                    return (
+                        <SocialPill href={profile.url}>
+                            {Icon && <Icon />}
+                            {profile.network}
+                        </SocialPill>
+                    );
+                })
+            }
             <Soon>
                 <DownloadCVButton> Descarga mí CV </DownloadCVButton>
             </Soon>

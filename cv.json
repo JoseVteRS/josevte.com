@@ -1,0 +1,263 @@
+{
+  "basics": {
+    "name": "Jose Vte",
+    "label": "Full Stack Developer con más de 4 años de experiencia",
+    "image": "/josevte.jpeg",
+    "email": "",
+    "phone": "",
+    "url": "https://josevte.com",
+    "summary": "Más de 4 años de experiencia. <strong>Técnico Superior en Desarrollo de Aplicaciones Web</strong>, de Valencia, España 🇪🇸. Apasionado por la tecnología y el desarrollo de soluciones innovadoras.",
+    "location": {
+      "address": "",
+      "postalCode": "46022",
+      "city": "Valencia",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jose-vte-ripoll-solanes-44920250",
+        "url": "https://linkedin.com/in/jose-vte-ripoll-solanes-44920250"
+      },
+      {
+        "network": "GitHub",
+        "username": "JoseVteRS",
+        "url": "https://github.com/JoseVteRS"
+      }
+    ]
+  },
+  "aboutMe": {
+    "rawText": "<p>Me llamo José Vte, aunque prefiero que me llamen José. Realmente, empecé a interesarme por la programación y el desarrollo web cuando sufrí un esguince. Como no tenía mucho que hacer, instalé por aquel entonces Dreamweaver y comencé a <em>experimentar</em>. No tenía ni idea de desarrollo web ni de programación.</p><p>Sin parar de estudiar y siendo completamente autodidacta, he conseguido <strong>desarrollar un tema de Wordpress desde cero</strong>.</p><p>He logrado que sea <strong>sostenible y escalable</strong>, gracias a la utilización de <strong>buena prácticas y principios SOLID</strong> en PHP.</p><p>Si estás buscando un desarrollador web con una trayectoria de aprendizaje autodidacta y dedicación, <strong>me encantaría tener la oportunidad de aportar mi experiencia y entusiasmo al equipo</strong>.</p>"
+  },
+  "work": [
+    {
+      "name": "Acrismatic",
+      "position": "Diseñador y Desarollador Frontend",
+      "url": "",
+      "startDate": "2018",
+      "endDate": "",
+      "summary": "Desarrollo a medida de diversos temas de WordPress para las webs del grupo, mejorando la calidad del código, dejando de depender de constructores, además de herramientas desarrolladas en React para agilizar el trabajo interno del departamento.",
+      "highlights": [
+        ""
+      ]
+    },
+    {
+      "name": "Tictactickets",
+      "position": "Diseñador y Desarollador Frontend",
+      "url": "",
+      "startDate": "2016",
+      "endDate": "2017",
+      "summary": "Desarrollo de la página de la Tomatina para vender tickets.",
+      "highlights": [
+        ""
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universitat Oberta de Catalunya",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Ingeniero de Software",
+      "studyType": "Bachelor",
+      "startDate": "2003-01-01",
+      "endDate": "2009-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Basic"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Lista de Regalos - Haz listas de regalos y compártelas",
+      "description": "Aplicación web para crear listar de regalos y compartirlas entre tus amigos y familiares a través de un enlace generado. Se ha utilizado para la autentificación next-auth y como ORM Prisma",
+      "image": "/projects/present-list.webp",
+      "highlights": [
+        "Lista de regalos"
+      ],
+      "tecnologies": [
+        "NextJS",
+        "Tailwindcss",
+        "MongoDB",
+        "Prisma"
+      ],
+      "repositoryUrl": "https://github.com/JoseVteRS/present-list",
+      "isInProgress": true,
+      "isActive": true,
+      "url": ""
+    }
+  ]
+}

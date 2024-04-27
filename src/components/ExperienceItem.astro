@@ -2,15 +2,16 @@
 import LinkInline from "./LinkInline.astro";
 
 interface Props {
-    title: string;
-    company: string;
-    description: string;
-    link?: string;
-    date: string;
-    isCurrent?: boolean;
+  name: string;
+  position: string;
+  summary: string;
+  startDate: string;
+  url?: string;
+  endDate?: string;
+  highlights?: Array<string>;
 }
 
-const { title, company, description, link, date, isCurrent } = Astro.props;
+const { name, position, summary, url, startDate, endDate } = Astro.props;
 ---
 
 <div
@@ -21,16 +22,32 @@ const { title, company, description, link, date, isCurrent } = Astro.props;
       <span class="text- -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
       >
-      <h3 class="text-xl font-bold text-sky-600">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
+      <h3 class="text-xl font-bold text-sky-600">{position}</h3>
+      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+        {name}
+      </h4>
+      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+        >{startDate}</time
+      >
+      <span class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">-</span>
+      {
+        endDate ? (
+          <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+            {endDate}
+          </time>
+        ) : (
+          <span class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Actual</span>
+        )
+      }
     </div>
   </div>
-  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-    {description}
+  <div
+    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+  >
+    {summary}
     {
-      link && (
-        <LinkInline href={link}>
+      url && (
+        <LinkInline href={url}>
           Saber más{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
