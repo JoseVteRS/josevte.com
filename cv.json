@@ -6,7 +6,7 @@
     "email": "",
     "phone": "",
     "url": "https://josevte.com",
-    "summary": "Más de 4 años de experiencia. <strong>Técnico Superior en Desarrollo de Aplicaciones Web</strong>, de Valencia, España 🇪🇸. Apasionado por la tecnología y el desarrollo de soluciones innovadoras.",
+    "summary": "Más de 4 años de experiencia. <strong>Técnico Superior en Desarrollo de Aplicaciones Web,</strong> de Valencia, España. Apasionado por la tecnología y el desarrollo de soluciones innovadoras.",
     "location": {
       "address": "",
       "postalCode": "46022",
@@ -69,13 +69,37 @@
   ],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Ingeniero de Software",
-      "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
-      "score": "4.0",
+      "institution": "IES Juan de Garay",
+      "url": "",
+      "area": "Técnico Desarrollo Aplicaciones Web",
+      "studyType": "Ciclo Formativo Grado Superior",
+      "startDate": "2014",
+      "endDate": "2016",
+      "score": "",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    },
+    {
+      "institution": "CIPFP La Costera",
+      "url": "",
+      "area": "Técnico Gestión Comercial y Marketing",
+      "studyType": "Ciclo Formativo Grado Superior",
+      "startDate": "2011",
+      "endDate": "2013",
+      "score": "7.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    },
+    {
+      "institution": "IES La Valldigna",
+      "url": "",
+      "area": "Técnico Administración y Finanzas",
+      "studyType": "Ciclo Formativo Grado Superior",
+      "startDate": "2009",
+      "endDate": "2010",
+      "score": "7.0",
       "courses": [
         "DB1101 - Basic SQL"
       ]
