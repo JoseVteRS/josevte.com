@@ -12,6 +12,10 @@ const SOCIAL_ICONS: SocialIcon = {
     GitHub,
     LinkedIn,
 };
+
+const TODAY = new Date().toLocaleDateString("es-ES")
+const PDF_FILENAME = `Jose-Vte-Ripoll-Solanes-${TODAY}`
+
 ---
 
 <section class="max-w-full">
@@ -53,9 +57,10 @@ const SOCIAL_ICONS: SocialIcon = {
                     );
                 })
             }
-            <Soon>
-                <DownloadCVButton> Descarga mí CV </DownloadCVButton>
-            </Soon>
+            <DownloadCVButton>
+                <a download={`${PDF_FILENAME}.pdf`} href="/curriculum" target="_blank" rel="noopener noreferer">Descarga mí CV</a>
+            </DownloadCVButton>
         </nav>
     </nav>
 </section>
+
