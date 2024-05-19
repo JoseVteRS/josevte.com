@@ -282,6 +282,27 @@
       "isInProgress": true,
       "isActive": true,
       "url": "https://listaderegalos.vercel.app/"
+    },
+        {
+      "name": "Controla tus gastos e ingresos",
+      "description": "Aplicación realizada en la platafomra codewithantonio. Se usa NextJS, Hono para la API routes y Clerk para autentificar los usuarios. Para base de datos se usa PostgresSQL con el ORM Drizzle",
+      "image": "/projects/finance-tutorial.webp",
+      "highlights": [
+        "Financias",
+        "Control gastos e ingresos"
+      ],
+      "tecnologies": [
+        "NextJS",
+        "Tailwindcss",
+        "Drizzle",
+        "Hono",
+        "Clerk",
+        "Charts - recharts"
+      ],
+      "repositoryUrl": "https://github.com/JoseVteRS/finance-tutorial",
+      "isInProgress": false,
+      "isActive": true,
+      "url": "https://finance-tutorial-chi.vercel.app/"
     }
   ]
 }
