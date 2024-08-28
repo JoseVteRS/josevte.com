@@ -303,6 +303,30 @@
       "isInProgress": false,
       "isActive": true,
       "url": "https://finance-tutorial-chi.vercel.app/"
+    },
+            {
+      "name": "Clone de Canvas",
+      "description": "Aplicación realizada en la platafomra codewithantonio. Se usa NextJS, Hono para la API routes y NextAuth para autentificar los usuarios. Para base de datos se usa PostgresSQL con el ORM Drizzle. Stripe para los pagos y, muchas más tecnologias como tanstack/query, zod, zustand, shadcn-ui, etc",
+      "image": "/projects/screenshot-canvas-clone.webp",
+      "highlights": [
+        "Canvas",
+        "Clone"
+      ],
+      "tecnologies": [
+        "NextJS",
+        "Tailwindcss",
+        "Drizzle",
+        "Hono",
+        "NextAuth",
+        "Tanstack/query",
+        "Shadcn-ui",
+        "zod",
+        "zustand",
+      ],
+      "repositoryUrl": "https://github.com/JoseVteRS/image-ai",
+      "isInProgress": false,
+      "isActive": true,
+      "url": "https://clone-canvas.vercel.app/"
     }
   ]
 }
