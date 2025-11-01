@@ -1,22 +1,22 @@
-FROM node:22-alpine AS builder
+FROM node:20 AS builder
 WORKDIR /app
 
-# Copia solo archivos necesarios para instalar dependencias
+# Habilitar pnpm mediante corepack (recomendado por Node)
+RUN corepack enable
+
+# Copiar solo archivos de dependencias
 COPY package.json pnpm-lock.yaml ./
 
-# Instala pnpm global
-RUN npm install -g pnpm
+# Instalar dependencias sin forzar lockfile
+RUN pnpm install
 
-# Instala dependencias usando el lockfile
-RUN pnpm install --frozen-lockfile
-
-# Copia el resto del código
+# Copiar todo el proyecto
 COPY . .
 
 # Build Astro
 RUN pnpm run build
 
-# Etapa final: servir estático
+# Etapa final para servir estático
 FROM nginx:stable-alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
